@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="exchange">
+        <h2>Valyuta məzənnələri</h2>
+        <div class="cardTop cards">
+            <div class="card">
+                <div class="exc_header">Nagd</div>
+                <div class="exc_date">Yeniləndi 16.09.2024</div>
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Valyuta</th>
+                                <th>Alış</th>
+                                <th>Satış</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>USD</td>
+                                <td>1.6975 </td>
+                                <td>1.7025 </td>
+                            </tr>
+                            <tr>
+                                <td>EUR</td>
+                                <td>1.8621</td>
+                                <td>1.9111</td>
+                            </tr>
+                            <tr>
+                                <td>RUB</td>
+                                <td>0.0159</td>
+                                <td>0.0202</td>
+                            </tr>
+                            <tr>
+                                <td>GBP</td>
+                                <td>2.2028</td>
+                                <td>2.2799</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card">
+                <div class="exc_header">Nağdsız</div>
+                <div class="exc_date">Yeniləndi 16.09.2024</div>
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Valyuta</th>
+                                <th>Alış</th>
+                                <th>Satış</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>USD</td>
+                                <td>1.6900</td>
+                                <td>1.7025</td>
+                            </tr>
+                            <tr>
+                                <td>EUR</td>
+                                <td>1.8583</td>
+                                <td>1.9168</td>
+                            </tr>
+                            <tr>
+                                <td>RUB</td>
+                                <td>0.0164</td>
+                                <td>0.0204</td>
+                            </tr>
+                            <tr>
+                                <td>GBP</td>
+                                <td>2.2028</td>
+                                <td>2.2698</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card">
+                <div class="exc_header">Kart</div>
+                <div class="exc_date">Yeniləndi 16.09.2024</div>
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Valyuta</th>
+                                <th>Alış</th>
+                                <th>Satış</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>USD</td>
+                                <td>1.6950</td>
+                                <td>1.7150</td>
+                            </tr>
+                            <tr>
+                                <td>EUR</td>
+                                <td>1.8600</td>
+                                <td>1.9100</td>
+                            </tr>
+                            <tr>
+                                <td>RUB</td>
+                                <td>0.0185</td>
+                                <td>0.0193</td>
+                            </tr>
+                            <tr>
+                                <td>GBP</td>
+                                <td>2.2100</td>
+                                <td>2.2542</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="cardBottom">
+            <div class="left">
+                <div>Valyuta kalkulyatoru</div>
+                <div>Nağd məzənnə əsasında hesablanır</div>
+            </div>
+            <div class="right">
+                <div class="up">
+                   <div>
+                    <input id="inputFrom" type="number" oninput="calc()">
+                   </div>
+                  <div>
+                    <div class="custom-select">
+                        <div class="select-box" onclick="toggleDropdown(event)">
+                            <span class="selected-option">
+                                <img src="img/usd.png" alt="USD flag"> USD
+                            </span>
+                        </div>
+                        <ul class="dropdown">
+                            <li onclick="selectOption('AZN', 'img/azn.png', event)">
+                                <img src="img/azn.png" alt="AZN flag"> AZN
+                            </li>
+                            <li onclick="selectOption('RUB', 'img/rub.png', event)">
+                                <img src="img/rub.png" alt="RUB flag"> RUB
+                            </li>
+                            <li onclick="selectOption('USD', 'img/usd.png', event)">
+                                <img src="img/usd.png" alt="USD flag"> USD
+                            </li>
+                            <li onclick="selectOption('GBP', 'img/gbp.png', event)">
+                                <img src="img/gbp.png" alt="GBP flag"> GBP
+                            </li>
+                            <li onclick="selectOption('EUR', 'img/euro.png', event)">
+                                <img src="img/euro.png" alt="EUR flag"> EUR
+                            </li>
+                        </ul>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="down">
+                    <div>
+                        <input id="inputTo" type="number" oninput="calc()">
+                       </div>
+                      <div>
+                        <div class="custom-select">
+                            <div class="select-box" onclick="toggleDropdown(event)">
+                                <span class="selected-option">
+                                    <img src="img/azn.png" alt="AZN flag"> AZN
+                                </span>
+                            </div>
+                            <ul class="dropdown">
+                                <li onclick="selectOption('AZN', 'img/azn.png', event)">
+                                    <img src="img/azn.png" alt="AZN flag"> AZN
+                                </li>
+                                <li onclick="selectOption('RUB', 'img/rub.png', event)">
+                                    <img src="img/rub.png" alt="RUB flag"> RUB
+                                </li>
+                                <li onclick="selectOption('USD', 'img/usd.png', event)">
+                                    <img src="img/usd.png" alt="USD flag"> USD
+                                </li>
+                                <li onclick="selectOption('GBP', 'img/gbp.png', event)">
+                                    <img src="img/gbp.png" alt="GBP flag"> GBP
+                                </li>
+                                <li onclick="selectOption('EUR', 'img/euro.png', event)">
+                                    <img src="img/euro.png" alt="EUR flag"> EUR
+                                </li>
+                            </ul>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

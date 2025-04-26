@@ -273,10 +273,12 @@ let data = {
 }
 
 
+
 function toggleDropdown(event) {
 	const dropdown = event.currentTarget.nextElementSibling;
 	dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
 }
+
 let fromCurrency = 'USD';
 let toCurrency = 'AZN';
 
@@ -289,19 +291,27 @@ function selectOption(currency, flag, event) {
 
 	if (selectedOption.closest('.down')) {
 		toCurrency = currency;
+		calcToFrom()
 	} else {
 		fromCurrency = currency;
+		calcFromTo()
 	}
-	calc()
 }
 
-function calc() {
+function calcFromTo() {
 	let inputFrom = document.getElementById('inputFrom').value;
 	let fromValute = data.Valute.find(item => item._Code === fromCurrency);
 	let toValute = data.Valute.find(item => item._Code === toCurrency);
-	let result = (inputFrom * fromValute.Value)
+	let result = (inputFrom * fromValute.Value)/ toValute.Value
 	document.getElementById('inputTo').value = result.toFixed(4);
-	console.log(result);
+}
+
+function calcToFrom() {
+	let inputTo = document.getElementById('inputTo').value;
+	let fromValute = data.Valute.find(item => item._Code === fromCurrency);
+	let toValute = data.Valute.find(item => item._Code === toCurrency);
+
+		let result = (inputTo * toValute.Value) / fromValute.Value
+		document.getElementById('inputFrom').value = result.toFixed(4);
 	
 }
-calc()
